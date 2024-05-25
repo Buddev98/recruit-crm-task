@@ -1,0 +1,16 @@
+.header-section {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    width: 360px;
+    height: 40px;
+  }
+
+  .icons-list {
+    display: flex;
+    margin: unset;
+  }
+}

@@ -1,0 +1,21 @@
+.icons-list {
+  list-style: none;
+  padding-left: unset;
+  text-align: center;
+  li {
+    padding: 8px;
+    .icon-btn {
+      all: unset;
+    }
+    img {
+      width: 38px;
+      height: 38px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hide-icon {
+    display: none;
+  }
+}

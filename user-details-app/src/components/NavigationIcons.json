@@ -1,0 +1,62 @@
+{
+  "navigationIcons": [
+    { "name": "more", "srcPath": "/images/navigationIcons/more-apps.svg", "showInMoblie": false },
+    { "name": "user", "srcPath": "/images/navigationIcons/user-icon.svg", "showInMoblie": true },
+    { "name": "building", "srcPath": "/images/navigationIcons/building.svg", "showInMoblie": true },
+    { "name": "contacts", "srcPath": "/images/navigationIcons/contacts.svg", "showInMoblie": true },
+    { "name": "work", "srcPath": "/images/navigationIcons/work.svg", "showInMoblie": false },
+    { "name": "messages", "srcPath": "/images/navigationIcons/messages.svg", "showInMoblie": false },
+    { "name": "calendar", "srcPath": "/images/navigationIcons/calendar.svg", "showInMoblie": false },
+    { "name": "dollar", "srcPath": "/images/navigationIcons/dollar.svg", "showInMoblie": false },
+    { "name": "clock", "srcPath": "/images/navigationIcons/clock.svg", "showInMoblie": false },
+    { "name": "payment", "srcPath": "/images/navigationIcons/payment.svg", "showInMoblie": false },
+    { "name": "settings", "srcPath": "/images/navigationIcons/settings.svg", "showInMoblie": false },
+    { "name": "options", "srcPath": "/images/navigationIcons/more-options.svg", "showInMoblie": false }
+  ],
+  "headerIcons" : [
+    { "name": "quick-add-on", "srcPath": "/images/navigationIcons/quick-add-on.svg", "showInMoblie": false },
+    { "name": "gift", "srcPath": "/images/navigationIcons/gift.svg", "showInMoblie": false },
+    { "name": "messages-grey", "srcPath": "/images/navigationIcons/messages-grey.svg", "showInMoblie": false },
+    { "name": "notifications", "srcPath": "/images/navigationIcons/notifications.svg", "showInMoblie": false }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "currentOrganization": "TCS",
+      "skills": ["Html", "CSS", "JavaScript"],
+      "availableFrom": "Jan, 13,2024",
+      "currentSalary": "$45000",
+      "noticePeriod": "90 Days",
+      "fullAddress": "9500 Chennai",
+      "resume": "resume",
+      "totalExperience": "7 Years",
+      "summary": "React Background",
+      "currentEmploymentStatus": "Active",
+      "dateOfBirth": "15 June 1993",
+      "relevantExperience": "8 Years",
+      "salaryExpectation": "$80000",
+      "status": "Submitted for Approval",
+      "salaryType": "Annual",
+      "languageSkills": ["Tamil", "English", "Hindi"]
+    },
+    {
+      "id": 2,
+      "currentOrganization": "Accenture",
+      "skills": ["Java", "Spring", "SpringBoot"],
+      "availableFrom": "Jan, 17,2024",
+      "currentSalary": "$50000",
+      "noticePeriod": "60 Days",
+      "fullAddress": "950 Pune",
+      "resume": "resume",
+      "totalExperience": "5 Years",
+      "summary": "Java Background",
+      "currentEmploymentStatus": "Active",
+      "dateOfBirth": "15 March 1992",
+      "relevantExperience": "7 Years",
+      "salaryExpectation": "$90000",
+      "status": "Submitted for Approval",
+      "salaryType": "Annual",
+      "languageSkills": ["Tamil", "English", "Hindi"]
+    }
+  ]
+}

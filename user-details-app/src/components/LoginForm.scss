@@ -1,0 +1,18 @@
+.login-wrapper {
+  padding: 20px;
+  border: solid 1px black;
+  border-radius: 5px;
+  width: 400px;
+  min-height: 300px;
+  margin: auto;
+  text-align: center;
+  .login-form, .registeration-form {
+    .email-input, .password-input, .login-btn {
+      display: block;
+      margin: 10px auto; 
+      width: 300px;
+      height: 25px;
+    }
+  }
+
+}
