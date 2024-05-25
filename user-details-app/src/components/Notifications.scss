@@ -1,0 +1,36 @@
+.notifications-section {
+  padding: 16px 0;
+  width: 30%;
+  .icons-list {
+    display: flex;
+    .notifications-icons {
+      background-color: #E6F1FF;
+      border-radius: 50%;
+      margin-right: 10px;
+      img {
+        width: 19px;
+        height: 15px;
+      }
+    }
+  }
+  .notifications {
+    background-color: #F8F9FA;
+    .filter-options {
+      background-color: #E9ECEF;
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      margin: unset;
+      padding: 20px 0;
+      button {
+        all: unset;
+        &.active {
+          color: #2570CA;
+        }
+      }
+    }
+    .notification-cards-list {
+      padding: 16px;
+    }
+  }
+}

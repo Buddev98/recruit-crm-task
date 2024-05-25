@@ -7,6 +7,17 @@
     flex-direction: column;
     .user-details-notifications {
       display: flex;
+      .user-details-section-container {
+        width: 70%;
+        table {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px;
+          tbody {
+            width: 50%;
+          }
+        }
+      }
     }
   }
 }

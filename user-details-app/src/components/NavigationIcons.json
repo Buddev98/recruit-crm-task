@@ -19,6 +19,32 @@
     { "name": "messages-grey", "srcPath": "/images/navigationIcons/messages-grey.svg", "showInMoblie": false },
     { "name": "notifications", "srcPath": "/images/navigationIcons/notifications.svg", "showInMoblie": false }
   ],
+  "notificationsIcons": [
+    { "name": "notes", "srcPath": "/images/navigationIcons/notes-icon.svg", "showInMoblie": false },
+    { "name": "phone", "srcPath": "/images/navigationIcons/phone-icon.svg", "showInMoblie": false },
+    { "name": "tick", "srcPath": "/images/navigationIcons/tick-mark.svg", "showInMoblie": false },
+    { "name": "calendar-blue", "srcPath": "/images/navigationIcons/calendar-blue.svg", "showInMoblie": false }
+  ],
+  "notificationFilters": [
+    { "id": "All", "name": "All"},
+    { "id": "Notes", "name": "Notes & Calls"},
+    { "id": "Tasks", "name": "Tasks"},
+    { "id": "Meetings", "name": "Meetings"},
+    { "id": "Files", "name": "Files"}
+  ],
+  "notifications" : [
+    {"id": "Note", "userName": "John Doe", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 12, 2024, 10:54 am", "association": "1", "status": "To Do" },
+    {"id": "Task", "userName": "Phyllis Yang", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 11, 2024, 09:54 am", "association": "2", "status": "Done" },
+    {"id": "Meeting", "userName": "William Sample", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 12, 2024, 11:54 am", "association": "6", "status": "" },
+    {"id": "Note", "userName": "Phyllis Yang", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 10, 2024, 11:54 am", "association": "1", "status": "Done" },
+    {"id": "Task", "userName": "William Sample", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 12, 2024, 11:54 am", "association": "2", "status": "To Do" },
+    {"id": "Meeting", "userName": "John Doe", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 09, 2024, 12:54 am", "association": "5", "status": "" },
+    {"id": "Note", "userName": "William Sample", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 12, 2024, 07:54 am", "association": "1", "status": "Done" },
+    {"id": "Task", "userName": "John Doe", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 26, 2024, 11:54 am", "association": "3", "status": "To Do" },
+    {"id": "Meeting", "userName": "Phyllis Yang", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 22, 2024, 08:54 am", "association": "4", "status": "" },
+    {"id": "Call", "userName": "John Doe", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 23, 2024, 11:54 am", "association": "3", "status": "To Do" },
+    {"id": "Call", "userName": "Phyllis Yang", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 29, 2024, 08:54 am", "association": "4", "status": "" }
+  ],
   "users": [
     {
       "id": 1,

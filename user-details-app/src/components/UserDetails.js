@@ -1,42 +1,26 @@
-import './UserDetails.scss';
+'use client';
 
-export default function UserDetails({ user }) {
+export default function UserDetails({ user, start, end }) {
   let isEditMode = false;
   return (
-    <div className='user-details-section'>
-      <ul className='user-details'>
-        {Object.keys(user)?.slice(1, 9)?.map((key) => {
-          console.log(typeof(user[key]));
-          return (
-            <>
-              {key !== 'id' && (
-                <li key={key}>
+    <tbody>
+      {Object.keys(user)?.slice(start, end)?.map((key) => {
+        return (
+          <>
+            {key !== 'id' && (
+              <tr key={key} className='user-details-section'>
+                <td>
                   <strong><label>{key}</label></strong>
-                  {isEditMode && <input type="text" name={user[key]} />}
-                  {!isEditMode && user[key]}
-                </li>
-              )}
-            </>
-          );
-        })}
-      </ul>
-      <ul className='user-details'>
-        {Object.keys(user)?.slice(9, 17)?.map((key) => {
-          console.log(typeof(user[key]));
-          return (
-            <>
-              {key !== 'id' && (
-                <li key={key}>
-                  <strong><label>{key}</label></strong>
-                  {isEditMode && <input type="text" name={user[key]} />}
-                  {!isEditMode && user[key]}
-                </li>
-              )}
-            </>
-          );
-        })}
-      </ul>
-    </div>
-    
+                </td>
+                <td>
+                  {isEditMode && <input type="text" name={user[key]} value={user[key]} />}
+                  {!isEditMode && ((key === 'languageSkills' || key === 'skills') ? user[key]?.join(', ') : user[key])}
+                </td>
+              </tr>
+            )}
+          </>
+        );
+      })}
+    </tbody>
   );
 }

@@ -1,0 +1,29 @@
+.notification-card {
+  padding: 16px;
+  border: solid 1px #E9ECEF;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin-bottom: 16px;
+  p {
+    span {
+      margin-right: 10px;
+    }
+    &:first-child {
+      display: flex;
+      align-items: center;
+      img {
+        padding: 5px;
+        margin-right: 10px;
+        background-color: #E6F1FF;
+        border-radius: 50%;
+      }
+    }
+    &:nth-child(3) {
+      color: #2570CA;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
