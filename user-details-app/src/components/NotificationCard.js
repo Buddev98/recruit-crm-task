@@ -14,7 +14,7 @@ export default function NotificationCard({ data = {} }) {
       </p>
       <p>{content}</p>
       <p>{association} Association(s)</p>
-      <p><span><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} />{userName}</span><span>{dateTime}</span></p>
+      <p><span><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} alt='user' />{userName}</span><span>{dateTime}</span></p>
     </div>
   )
 }

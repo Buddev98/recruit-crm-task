@@ -9,12 +9,15 @@
       display: flex;
       .user-details-section-container {
         width: 70%;
-        table {
+        .user-details-table {
           display: flex;
           justify-content: space-between;
           padding: 16px;
-          tbody {
-            width: 50%;
+          td {
+            padding: 5px 0;
+            label {
+              margin-right: 40px;
+            }
           }
         }
       }

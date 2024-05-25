@@ -6,11 +6,10 @@ import IconsList from './IconsList';
 import './Header.scss';
 
 export default function Header({ headerIcons }) {
-  const placeholder = [, ]
   return (
     <div className='header-section'>
-      <div>
-        <Image src={'/images/navigationIcons/search.svg'} width={20} height={20} />
+      <div className='search-input'>
+        <Image className='search-icon' src={'/images/navigationIcons/search.svg'} width={20} height={20} alt='search' />
         <input type='search' name='search' placeholder={'search pipedrive'} />
       </div>
       <Image src={'/images/svg/RCRM-Logo-Watermark.svg'} width={160} height={35} alt='RCRM-Logo' />

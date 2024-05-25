@@ -45,25 +45,39 @@
     {"id": "Call", "userName": "John Doe", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 23, 2024, 11:54 am", "association": "3", "status": "To Do" },
     {"id": "Call", "userName": "Phyllis Yang", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 29, 2024, 08:54 am", "association": "4", "status": "" }
   ],
+  "detailsFilter": [
+    { "id": "allDetails", "name": "All Details"},
+    { "id": "assignedJobs", "name": "Assigned Jobs"},
+    { "id": "emails", "name": "Related Emails"},
+    { "id": "questions", "name": "Candidate Questions"},
+    { "id": "deals", "name": "Related Deals"},
+    { "id": "contacts", "name": "Contact(s) Pitched"}
+  ],
+  "jobDetails": [
+    {"name": "Senior Product Manager", "company": "Recruit CRM", "userName": "John Doe", "date": "Jul 12, 2024", "status": "Assigned" },
+    {"name": "Senior Product Manager", "company": "Recruit CRM", "userName": "William Sample", "date": "Jul 10, 2024", "status": "Assigned" },
+    {"name": "Senior Product Manager", "company": "Recruit CRM", "userName": "John Doe", "date": "Jul 22, 2024", "status": "Assigned" },
+    {"name": "Senior Product Manager", "company": "Recruit CRM", "userName": "William Sample", "date": "Jul 15, 2024", "status": "Assigned" }
+  ],
   "users": [
     {
       "id": 1,
-      "currentOrganization": "TCS",
-      "skills": ["Html", "CSS", "JavaScript"],
-      "availableFrom": "Jan, 13,2024",
-      "currentSalary": "$45000",
-      "noticePeriod": "90 Days",
-      "fullAddress": "9500 Chennai",
-      "resume": "resume",
-      "totalExperience": "7 Years",
-      "summary": "React Background",
-      "currentEmploymentStatus": "Active",
-      "dateOfBirth": "15 June 1993",
-      "relevantExperience": "8 Years",
-      "salaryExpectation": "$80000",
-      "status": "Submitted for Approval",
-      "salaryType": "Annual",
-      "languageSkills": ["Tamil", "English", "Hindi"]
+      "currentOrganization": { "label": "Current Organization", "value": "TCS" },
+      "skills": { "label": "Skills", "value": ["Html", "CSS", "JavaScript"] },
+      "availableFrom": { "label": "Available From", "value": "Jan, 13,2024" },
+      "currentSalary": { "label": "Current Salary", "value": "$45000" },
+      "noticePeriod": { "label": "Notice Period", "value": "90 Days" },
+      "fullAddress": { "label": "Full Address", "value": "9500 Chennai" },
+      "resume": { "label": "Resume", "value": "resume" },
+      "totalExperience": { "label": "Total Experience", "value": "7 Years" },
+      "summary": { "label": "Summary", "value": "React Background" },
+      "currentEmploymentStatus": { "label": "Current Employment Status", "value": "Active" },
+      "dateOfBirth": { "label": "Date of Birth", "value": "15 June 1993" },
+      "relevantExperience": { "label": "Relevent Experience", "value": "8 Years" },
+      "salaryExpectation": { "label": "Salary Expectation", "value": "$80000" },
+      "status": { "label": "Status", "value": "Submitted for Approval" },
+      "salaryType": { "label": "Salary Type", "value": "Annual" },
+      "languageSkills": { "label": "Language Skills", "value": ["Tamil", "English", "Hindi"] }
     },
     {
       "id": 2,

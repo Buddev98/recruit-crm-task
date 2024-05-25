@@ -1,6 +1,13 @@
 .body {
   max-width: 1300px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
+  p {
+    margin-top: unset;
+    margin-bottom: 5px;
+  }
+  button {
+    all: unset;
+  }
 }

@@ -10,11 +10,11 @@ export default function UserDetails({ user, start, end }) {
             {key !== 'id' && (
               <tr key={key} className='user-details-section'>
                 <td>
-                  <strong><label>{key}</label></strong>
+                  <strong><label>{user[key]?.label}</label></strong>
                 </td>
                 <td>
-                  {isEditMode && <input type="text" name={user[key]} value={user[key]} />}
-                  {!isEditMode && ((key === 'languageSkills' || key === 'skills') ? user[key]?.join(', ') : user[key])}
+                  {isEditMode && <input type="text" name={user[key]?.label} value={user[key]?.value} />}
+                  {!isEditMode && ((key === 'languageSkills' || key === 'skills') ? user[key]?.value?.join(', ') : user[key]?.value)}
                 </td>
               </tr>
             )}
