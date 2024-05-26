@@ -6,6 +6,10 @@
   min-height: 300px;
   margin: auto;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    width: unset;
+    margin: 20px;
+  }
   .login-form, .registeration-form {
     .email-input, .password-input, .login-btn {
       display: block;

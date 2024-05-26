@@ -6,6 +6,7 @@ import { users, navigationIcons, headerIcons, notificationsIcons, notificationFi
 import './UserDetails.scss';
 import Notifications from '@/components/Notifications';
 import JobDetails from '@/components/JobDetails';
+import AccountDetails from '@/components/AccountDetails';
 
 export default function UserDetailsPage() {
   return (
@@ -15,9 +16,11 @@ export default function UserDetailsPage() {
         <Header headerIcons={headerIcons} />
         <div className='user-details-notifications'>
           <div className='user-details-section-container'>
+            <AccountDetails />
             <table className='user-details-table'>
-              <UserDetails user={users[0]} start={1} end={9} />
-              <UserDetails user={users[0]} start={9} end={17} />
+              <UserDetails className={'hide-mobile'} user={users[0]} start={2} end={10} />
+              <UserDetails className={'hide-mobile'} user={users[0]} start={10} end={18} />
+              <UserDetails className={'show-in-mobile'} user={users[0]} start={2} end={18} />
             </table>
             <JobDetails detailsFilter={detailsFilter} jobDetails={jobDetails} />
           </div>

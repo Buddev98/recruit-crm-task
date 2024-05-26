@@ -2,6 +2,10 @@
   list-style: none;
   padding-left: unset;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    margin: unset;
+  }
+
   li {
     padding: 8px;
     .icon-btn {

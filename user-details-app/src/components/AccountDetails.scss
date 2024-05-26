@@ -1,0 +1,30 @@
+.account-details {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: solid 1px #E9ECEF;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  .account-info {
+    display: flex;
+  }
+
+  button {
+    padding: 5px;
+    border: solid 1px #E9ECEF;
+    border-radius: 5px;
+    margin-right: 5px;
+
+    &.contact {
+      &.linked {
+        color: '';
+        background-color: '';
+      }
+      &.not-linked {
+        color: #E03131;
+        background-color: #F6C1C1;
+      }
+    }
+  }
+}

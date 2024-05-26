@@ -1,5 +1,5 @@
 .jobs {
-  border: solid 1px #E9ECEF;
+  outline: thin solid #E9ECEF;
   border-radius: 5px;
   td {
     img {
@@ -9,6 +9,11 @@
       padding: 5px;
       border: solid 1px #E9ECEF;
       border-radius: 5px;
+    }
+    &.status, &.view-details, &.toggle-switch {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 }

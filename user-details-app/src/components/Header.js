@@ -12,10 +12,10 @@ export default function Header({ headerIcons }) {
         <Image className='search-icon' src={'/images/navigationIcons/search.svg'} width={20} height={20} alt='search' />
         <input type='search' name='search' placeholder={'search pipedrive'} />
       </div>
-      <Image src={'/images/svg/RCRM-Logo-Watermark.svg'} width={160} height={35} alt='RCRM-Logo' />
+      <Image className='logo' src={'/images/svg/RCRM-Logo-Watermark.svg'} width={160} height={35} alt='RCRM-Logo' />
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <IconsList icons={headerIcons} />
-        <div style={{ display: 'flex' }}>
+        <div className='user-info' style={{ display: 'flex' }}>
           <Image src={'/images/navigationIcons/userIcon.svg'} width={36} height={36} alt='userIcon' />
           <div><strong>Phyllis Yang</strong> <br></br> Silicon Links Inc</div>
         </div>

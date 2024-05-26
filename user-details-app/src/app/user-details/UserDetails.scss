@@ -1,22 +1,52 @@
 .user-details-page {
   display: flex;
   justify-content: space-between;
+  @media only screen and (width < 767px) {
+    flex-direction: column-reverse;
+  }
   .main-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     .user-details-notifications {
       display: flex;
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
       .user-details-section-container {
         width: 70%;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
         .user-details-table {
           display: flex;
           justify-content: space-between;
           padding: 16px;
+
+          .hide-mobile {
+            display: block;
+            @media only screen and (max-width: 768px) {
+              display: none;
+            }
+          }
+
+          .show-in-mobile {
+            display: none;
+            @media only screen and (max-width: 768px) {
+              display: block;
+            }
+          }
+          
           td {
             padding: 5px 0;
+            @media only screen and (max-width: 768px) {
+              padding: 5px;
+            }
             label {
               margin-right: 40px;
+              @media only screen and (max-width: 768px) {
+                margin-right: 20px;
+              }
             }
           }
         }

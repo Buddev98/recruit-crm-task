@@ -19,12 +19,12 @@ export default function Jobs({ data = {} }) {
         </div>
       </td>
       <td>
-        <p>{userName}</p>
+        <p><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} alt='user' />{userName}</p>
         <p>{date}</p>
       </td>
-      <td>{status}</td>
-      <td><button>View Files</button></td>
-      <td>
+      <td className='status'>{status}</td>
+      <td className='view-details'><button>View Files</button></td>
+      <td className='toggle-switch'>
         <Switch />
       </td>
     </tr>

@@ -5,26 +5,47 @@
   justify-content: space-between;
   border-bottom: solid 1px #E9ECEF;
 
+  .logo {
+    @media only screen and (max-width: 768px) {
+      width: 130px;
+      height: 30px;
+    }
+  }
   .search-input {
     position: relative;
     .search-icon {
       position: absolute;
       top: 10px;
       left: 10px;
+      @media only screen and (max-width: 768px) {
+        width: 10px;
+        height: 10px;
+        top: 5px;
+      }
     }
-  }
-
-  input {
-    width: 360px;
-    height: 40px;
-    padding: 10px 10px 10px 35px;
-    border: solid 1px #E9ECEF;
-    border-radius: 5px;
-    background-color: #F8F9FA;
+    input {
+      width: 360px;
+      height: 40px;
+      padding: 10px 10px 10px 35px;
+      border: solid 1px #E9ECEF;
+      border-radius: 5px;
+      background-color: #F8F9FA;
+      @media only screen and (max-width: 768px) {
+        width: 180px;
+        height: 20px;
+      }
+    }
   }
 
   .icons-list {
     display: flex;
     margin: unset;
+  }
+
+  .user-info {
+    display: flex;
+    @media only screen and (width < 767px) {
+      display: none !important;
+    }
   }
 }

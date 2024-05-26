@@ -1,13 +1,13 @@
 'use client';
 
-export default function UserDetails({ user, start, end }) {
+export default function UserDetails({ user, start, end, className }) {
   let isEditMode = false;
   return (
-    <tbody>
+    <tbody className={className}>
       {Object.keys(user)?.slice(start, end)?.map((key) => {
         return (
           <>
-            {key !== 'id' && (
+            {(key !== 'id' || key !== 'personalDetails') && (
               <tr key={key} className='user-details-section'>
                 <td>
                   <strong><label>{user[key]?.label}</label></strong>

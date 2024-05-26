@@ -21,7 +21,7 @@ export default function JobDetails({ detailsFilter, jobDetails }) {
     <div className='jobs-section'>
       <div className='job-details'>
         <ul className='filter-options'>
-          {detailsFilter?.map((item) => <li key={item.id} className={`${clicked === item.id ? 'active' : ''}`} ><button id={item.id} onClick={() => filterNotifications(item.id)}>{item.name}</button></li>)}
+          {detailsFilter?.map((item) => <li key={item.id} className={`${clicked === item.id ? 'active' : ''} ${!item.showInMobile ? 'hide-option' : ''}`} ><button id={item.id} onClick={() => filterNotifications(item.id)}>{item.name}</button></li>)}
         </ul>
         <table>
           <tbody>

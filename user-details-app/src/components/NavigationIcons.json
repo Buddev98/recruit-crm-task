@@ -1,36 +1,36 @@
 {
   "navigationIcons": [
-    { "name": "more", "srcPath": "/images/navigationIcons/more-apps.svg", "showInMoblie": false },
-    { "name": "user", "srcPath": "/images/navigationIcons/user-icon.svg", "showInMoblie": true },
-    { "name": "building", "srcPath": "/images/navigationIcons/building.svg", "showInMoblie": true },
-    { "name": "contacts", "srcPath": "/images/navigationIcons/contacts.svg", "showInMoblie": true },
-    { "name": "work", "srcPath": "/images/navigationIcons/work.svg", "showInMoblie": false },
-    { "name": "messages", "srcPath": "/images/navigationIcons/messages.svg", "showInMoblie": false },
-    { "name": "calendar", "srcPath": "/images/navigationIcons/calendar.svg", "showInMoblie": false },
-    { "name": "dollar", "srcPath": "/images/navigationIcons/dollar.svg", "showInMoblie": false },
-    { "name": "clock", "srcPath": "/images/navigationIcons/clock.svg", "showInMoblie": false },
-    { "name": "payment", "srcPath": "/images/navigationIcons/payment.svg", "showInMoblie": false },
-    { "name": "settings", "srcPath": "/images/navigationIcons/settings.svg", "showInMoblie": false },
-    { "name": "options", "srcPath": "/images/navigationIcons/more-options.svg", "showInMoblie": false }
+    { "name": "more", "srcPath": "/images/navigationIcons/more-apps.svg", "showInMobile": false },
+    { "name": "user", "srcPath": "/images/navigationIcons/user-icon.svg", "showInMobile": true },
+    { "name": "building", "srcPath": "/images/navigationIcons/building.svg", "showInMobile": true },
+    { "name": "contacts", "srcPath": "/images/navigationIcons/contacts.svg", "showInMobile": true },
+    { "name": "work", "srcPath": "/images/navigationIcons/work.svg", "showInMobile": false },
+    { "name": "messages", "srcPath": "/images/navigationIcons/messages.svg", "showInMobile": false },
+    { "name": "calendar", "srcPath": "/images/navigationIcons/calendar.svg", "showInMobile": false },
+    { "name": "dollar", "srcPath": "/images/navigationIcons/dollar.svg", "showInMobile": false },
+    { "name": "clock", "srcPath": "/images/navigationIcons/clock.svg", "showInMobile": false },
+    { "name": "payment", "srcPath": "/images/navigationIcons/payment.svg", "showInMobile": false },
+    { "name": "settings", "srcPath": "/images/navigationIcons/settings.svg", "showInMobile": true },
+    { "name": "options", "srcPath": "/images/navigationIcons/more-options.svg", "showInMobile": true }
   ],
   "headerIcons" : [
-    { "name": "quick-add-on", "srcPath": "/images/navigationIcons/quick-add-on.svg", "showInMoblie": false },
-    { "name": "gift", "srcPath": "/images/navigationIcons/gift.svg", "showInMoblie": false },
-    { "name": "messages-grey", "srcPath": "/images/navigationIcons/messages-grey.svg", "showInMoblie": false },
-    { "name": "notifications", "srcPath": "/images/navigationIcons/notifications.svg", "showInMoblie": false }
+    { "name": "quick-add-on", "srcPath": "/images/navigationIcons/quick-add-on.svg", "showInMobile": false },
+    { "name": "gift", "srcPath": "/images/navigationIcons/gift.svg", "showInMobile": false },
+    { "name": "messages-grey", "srcPath": "/images/navigationIcons/messages-grey.svg", "showInMobile": false },
+    { "name": "notifications", "srcPath": "/images/navigationIcons/notifications.svg", "showInMobile": false }
   ],
   "notificationsIcons": [
-    { "name": "notes", "srcPath": "/images/navigationIcons/notes-icon.svg", "showInMoblie": false },
-    { "name": "phone", "srcPath": "/images/navigationIcons/phone-icon.svg", "showInMoblie": false },
-    { "name": "tick", "srcPath": "/images/navigationIcons/tick-mark.svg", "showInMoblie": false },
-    { "name": "calendar-blue", "srcPath": "/images/navigationIcons/calendar-blue.svg", "showInMoblie": false }
+    { "name": "notes", "srcPath": "/images/navigationIcons/notes-icon.svg", "showInMobile": false },
+    { "name": "phone", "srcPath": "/images/navigationIcons/phone-icon.svg", "showInMobile": false },
+    { "name": "tick", "srcPath": "/images/navigationIcons/tick-mark.svg", "showInMobile": false },
+    { "name": "calendar-blue", "srcPath": "/images/navigationIcons/calendar-blue.svg", "showInMobile": false }
   ],
   "notificationFilters": [
-    { "id": "All", "name": "All"},
-    { "id": "Notes", "name": "Notes & Calls"},
-    { "id": "Tasks", "name": "Tasks"},
-    { "id": "Meetings", "name": "Meetings"},
-    { "id": "Files", "name": "Files"}
+    { "id": "All", "name": "All" },
+    { "id": "Notes", "name": "Notes & Calls" },
+    { "id": "Tasks", "name": "Tasks" },
+    { "id": "Meetings", "name": "Meetings" },
+    { "id": "Files", "name": "Files" }
   ],
   "notifications" : [
     {"id": "Note", "userName": "John Doe", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 12, 2024, 10:54 am", "association": "1", "status": "To Do" },
@@ -46,12 +46,12 @@
     {"id": "Call", "userName": "Phyllis Yang", "content": "Lorem dolore sit et aute cupidatat eu Lorem tempor proident consequat. In dolore mollit laborum ex cillum laboris occaecat ipsum Lorem cupidatat.", "dateTime": "Jul 29, 2024, 08:54 am", "association": "4", "status": "" }
   ],
   "detailsFilter": [
-    { "id": "allDetails", "name": "All Details"},
-    { "id": "assignedJobs", "name": "Assigned Jobs"},
-    { "id": "emails", "name": "Related Emails"},
-    { "id": "questions", "name": "Candidate Questions"},
-    { "id": "deals", "name": "Related Deals"},
-    { "id": "contacts", "name": "Contact(s) Pitched"}
+    { "id": "allDetails", "name": "All Details", "showInMobile": true },
+    { "id": "assignedJobs", "name": "Assigned Jobs", "showInMobile": true },
+    { "id": "emails", "name": "Related Emails", "showInMobile": true },
+    { "id": "questions", "name": "Candidate Questions", "showInMobile": false },
+    { "id": "deals", "name": "Related Deals", "showInMobile": false },
+    { "id": "contacts", "name": "Contact(s) Pitched", "showInMobile": false }
   ],
   "jobDetails": [
     {"name": "Senior Product Manager", "company": "Recruit CRM", "userName": "John Doe", "date": "Jul 12, 2024", "status": "Assigned" },
@@ -62,6 +62,16 @@
   "users": [
     {
       "id": 1,
+      "personalDetails": {
+        "userName": "William Sample",
+        "password": "Will@123",
+        "email": "williamsample@gmail.com",
+        "phoneNumber": "+91 9021232326",
+        "position": "Senior Product Manager",
+        "state": "United States",
+        "city": "Dallas",
+        "contactLinked": false
+      },
       "currentOrganization": { "label": "Current Organization", "value": "TCS" },
       "skills": { "label": "Skills", "value": ["Html", "CSS", "JavaScript"] },
       "availableFrom": { "label": "Available From", "value": "Jan, 13,2024" },
@@ -81,6 +91,16 @@
     },
     {
       "id": 2,
+      "personalDetails": {
+        "userName": "Phyllis Yang",
+        "password": "Will@123",
+        "email": "phyllisyang@gmail.com",
+        "phoneNumber": "+91 9021232326",
+        "position": "Product Manager",
+        "state": "United States",
+        "city": "Chicago",
+        "contactLinked": true
+      },
       "currentOrganization": "Accenture",
       "skills": ["Java", "Spring", "SpringBoot"],
       "availableFrom": "Jan, 17,2024",

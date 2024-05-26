@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './LoginForm.scss';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LoginForm() {
   const router = useRouter();
@@ -43,7 +44,7 @@ export default function LoginForm() {
 
   return (
     <div className='login-wrapper'>
-      <h1>Recruit CRM</h1>
+      <Image src={'/images/svg/RCRM-Logo-Watermark.svg'} width={160} height={35} alt='RCRM-Logo' />
       <p>Start your development journey</p>
       <div className='login-form'>
         <input className='email-input' value={email} type='email' name='email' required onChange={(e) => { setEmail(e.target.value); setError({ email: '', password: '' }); }} /> 

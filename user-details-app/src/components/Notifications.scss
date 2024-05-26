@@ -1,6 +1,9 @@
 .notifications-section {
   padding: 0 0 16px;
   width: 30%;
+  @media only screen and (width < 767px) {
+    width: 100%;
+  }
   .icons-list {
     display: flex;
     .notifications-icons {
