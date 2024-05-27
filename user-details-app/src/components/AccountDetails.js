@@ -1,18 +1,30 @@
 'use client';
 
-import IconsList from "./IconsList";
-import './AccountDetails.scss';
-import Image from "next/image";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { userDetailsStart } from "@/redux/slices/userDetails";
+import IconsList from './IconsList';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { userDetailsStart } from '@/redux/slices/userDetails';
 
-export default function AccountDetails() {
+import './AccountDetails.scss';
+import { useParams } from 'next/navigation';
+
+export default function AccountDetails({ setEditMode = () => {}, bodyObj = {} }) {
   const dispatch = useDispatch();
+  const { userId = '' } = useParams();
+  const [clicked, setClicked] = useState('');
   const {
-    data = {},
+    data: { personalDetails: { 
+      userName = '',
+      email = '',
+      phoneNumber = '',
+      position = '',
+      state = '',
+      city = '',
+      contactLinked = false
+    } = {} } = {},
   } = useSelector(({ userDetails }) => userDetails);
-  console.log(data, '----------------->')
+
   const btnList = [
     { id: 'contact', name: 'Contact Linked', isLinked: false },
     { id: 'Favourite', icon: 'star' },
@@ -25,27 +37,36 @@ export default function AccountDetails() {
     dispatch(userDetailsStart());
   }, []);
   
-
+  
   function handleClick(btn) {
+    setClicked(btn.id);
     if(btn.id === 'edit') {
-      console.log('editmode');
+      setEditMode(true);
+    } else if(btn.id === 'save') {
+      setEditMode(false);
+      dispatch(userDetailsStart({ bodyObj: bodyObj?.objects, method: 'PATCH', userId }));
     }
-    console.log(btn);
   }
 
   return (
-    <div className="account-details">
-      <div className="account-info">
+    <>
+    <div className='account-details'>
+      <div className='account-info'>
         <div><Image className='profile-icon' src={'/images/navigationIcons/profile-icon.svg'} width={40} height={40} alt='profile' /></div>
         <div>
-          <div><span>William Sample</span> <IconsList /></div>
-          <p><span>Senior Product Manager</span> <span>United States</span> <span>Dallas</span></p>
+          <div><span>{userName}</span> <IconsList /></div>
+          <p><span>{position}</span> <span>{state}</span> <span>{city}</span></p>
         </div>
       </div>
-      <div className="btn-options">
-        {btnList.map((item) => <button className={`${item.id === 'contact' ? 'contact' : ''} ${item.isLinked ? 'linked' : 'not-linked' }`} id={item.id} onClick={() => handleClick(item)} >{item.name ? item.name : <Image src={`/images/navigationIcons/${item.icon}.svg`} width={20} height={20} alt="user" />}</button>)}
+      <div className='btn-options'>
+        {btnList.map((item) => <button className={`${item.id === 'contact' ? 'contact' : ''} ${item.id === clicked ? 'active' : ''} ${(item.isLinked && contactLinked) ? 'linked' : 'not-linked' }`} id={item.id} onClick={() => handleClick(item)} >{item.name ? item.name : <Image src={`/images/navigationIcons/${item.icon}.svg`} width={20} height={20} alt='user' />}</button>)}
       </div>
     </div>
+    <div className='contact-info'>
+      <span><Image className='profile-icon' src={'/images/navigationIcons/messages-grey.svg'} width={20} height={20} alt='profile' /> {email}</span>
+      <span><Image className='profile-icon' src={'/images/navigationIcons/phone-icon.svg'} width={20} height={20} alt='phone' /> {phoneNumber}</span>
+    </div>
+    </>
   )
 }
 

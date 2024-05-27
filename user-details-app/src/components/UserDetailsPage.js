@@ -11,23 +11,25 @@ import JobDetails from '@/components/JobDetails';
 import AccountDetails from '@/components/AccountDetails';
 import { useDispatch, useSelector } from 'react-redux';
 import { userDetailsStart } from '@/redux/slices/userDetails';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 
 export default function UserDetailsPage() {
   const dispatch = useDispatch();
   const { userId = '' } = useParams();
-
+  const [editMode, setEditMode] = useState(false);
   const {
     data = {},
   } = useSelector(({ userDetails }) => userDetails);
+
+  const [bodyObj, setBodyObj] = useState(data);
+
 
   useEffect(() => {
     if(userId !== '') {
       dispatch(userDetailsStart({ userId }));
     }
   }, [userId]);
-
   return (
     <div className='user-details-page'>
       <SideNavigationBar navigationIcons={navigationIcons} />
@@ -35,11 +37,11 @@ export default function UserDetailsPage() {
         <Header headerIcons={headerIcons} />
         <div className='user-details-notifications'>
           <div className='user-details-section-container'>
-            <AccountDetails />
+            <AccountDetails bodyObj={bodyObj} setEditMode={setEditMode} />
             <table className='user-details-table'>
-              <UserDetails className={'hide-mobile'} user={data} start={2} end={10} />
-              <UserDetails className={'hide-mobile'} user={data} start={10} end={18} />
-              <UserDetails className={'show-in-mobile'} user={data} start={2} end={18} />
+              <UserDetails className={'hide-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={2} end={10} />
+              <UserDetails className={'hide-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={10} end={18} />
+              <UserDetails className={'show-in-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={2} end={18} />
             </table>
             <JobDetails detailsFilter={detailsFilter} jobDetails={jobDetails} />
           </div>

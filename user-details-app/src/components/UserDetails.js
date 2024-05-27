@@ -1,7 +1,21 @@
 'use client';
 
-export default function UserDetails({ user = {}, start, end, className }) {
-  let isEditMode = false;
+import { useState } from "react";
+
+export default function UserDetails({ user = {}, start, end, className, editMode = false, setBodyObj = () => {} }) {
+  const [changedInput, setChangedInput] = useState('');
+  const [value, setValue] = useState('')
+
+  function handleChange(e, labelText) {
+    setChangedInput(e.target.id);
+    setValue(e.target.value);
+    setBodyObj((state) => {
+      const newObject = {...state.objects};
+      newObject[`${e.target.id}`] = { label: labelText,  value: e.target.value, isEditable: true }
+      return {objects: newObject }
+    });
+  }
+  
   return (
     <tbody className={className}>
       {Object.keys(user)?.slice(start, end)?.map((key) => {
@@ -13,8 +27,8 @@ export default function UserDetails({ user = {}, start, end, className }) {
                   <strong><label>{user[key]?.label}</label></strong>
                 </td>
                 <td>
-                  {isEditMode && user[key]?.isEditable && <input type="text" name={user[key]?.label} value={user[key]?.value} />}
-                  {!isEditMode && ((key === 'languageSkills' || key === 'skills') ? user[key]?.value?.join(', ') : user[key]?.value)}
+                  {editMode && user[key]?.isEditable && <input type="text" id={key} onChange={(e) => handleChange(e, user[key]?.label)} name={user[key]?.label} value={changedInput === key ? value : user[key]?.value} />}
+                  {(!user[key]?.isEditable || !editMode) && ((key === 'languageSkills' || key === 'skills') ? user[key]?.value?.join(', ') : user[key]?.value)}
                 </td>
               </tr>
             )}

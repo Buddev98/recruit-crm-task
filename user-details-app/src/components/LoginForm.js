@@ -19,7 +19,6 @@ export default function LoginForm() {
 
 
   function handleLoginClick() {
-    debugger;
     if(!email && !password) {
       setError({ email: 'Please provide a valid email', password: '' });
     } else if(!email) {

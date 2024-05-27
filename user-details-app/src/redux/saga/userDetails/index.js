@@ -1,19 +1,20 @@
 import { actionChannel, call, put, take } from 'redux-saga/effects';
 
 import { userDetailsSuccess, userDetailsError } from '../../slices/userDetails';
+import fetchData from '@/utilities/fetchData';
 
 export default function* userDetailsSaga() {
-  debugger;
   try {
     const requestChannel = yield actionChannel('userDetails/userDetailsStart');
     while (true) {
       const { payload } = yield take(requestChannel);
-      console.log(payload);
-      const url = (payload && payload?.userId !== '') ? `http://localhost:5000/users?id=${payload?.userId}` : 'http://localhost:5000/users';
-      const response = yield call(() => fetch(url));
+      const method = (payload && payload?.method) ? payload?.method : 'GET';
+      const data = (payload && payload?.bodyObj) ? payload?.bodyObj : {};
+      const url = (payload && payload?.userId !== '') ? `http://localhost:5000/users/${payload?.userId}` : (payload && payload?.method === 'PATCH') ? `http://localhost:5000/users/${payload?.userId}` : 'http://localhost:5000/users';
+      const response = yield call(() => fetchData(url, method, data));
       if(response?.ok && response?.status === 200) {
         const jsonData = yield response.json();
-        const data = (payload && payload?.userId !== '') ? jsonData[0] : { users: jsonData };
+        const data = (payload && payload?.userId !== '') ? jsonData : { users: jsonData };
         yield put(userDetailsSuccess({ data }));
       } else {
         yield put(userDetailsError(response.error));

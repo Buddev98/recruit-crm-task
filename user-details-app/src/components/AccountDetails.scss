@@ -11,16 +11,28 @@
     img {
       margin-right: 10px;
     }
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 10px;
+    }
   }
 
   .btn-options {
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
+
     button {
       padding: 5px;
       border: solid 1px #E9ECEF;
       border-radius: 5px;
       margin-right: 5px;
+       
+      &.active {
+        background-color: #a0e4a0;
+      }
   
       &.contact {
         &.linked {
@@ -35,4 +47,22 @@
     }
   }
 
+}
+
+.contact-info {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  
+  span {
+    display: flex;
+    align-items: center;
+    color: #2570CA;
+    &:first-child, img {
+      margin-right: 10px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 }
