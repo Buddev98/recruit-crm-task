@@ -37,15 +37,21 @@
     }
   }
 
-  .icons-list {
-    display: flex;
-    margin: unset;
-  }
-
-  .user-info {
-    display: flex;
-    @media only screen and (width < 767px) {
-      display: none !important;
+  .icons-section {
+    .icons-list {
+      display: flex;
+      margin: unset;
+    }
+  
+    .user-info {
+      display: flex;
+      img {
+        margin-right: 15px;
+      }
+      @media only screen and (max-width: 768px) {
+        display: none !important;
+      }
     }
   }
+
 }

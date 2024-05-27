@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 .account-details {
   display: flex;
   padding: 16px;
@@ -41,7 +43,7 @@
         }
         &.not-linked {
           color: #E03131;
-          background-color: #F6C1C1;
+          background-color: $lightRed;
         }
       }
     }
@@ -53,11 +55,12 @@
   padding: 16px;
   display: flex;
   align-items: center;
+  border-bottom: solid 1px #E9ECEF;
   
   span {
     display: flex;
     align-items: center;
-    color: #2570CA;
+    color: $blue;
     &:first-child, img {
       margin-right: 10px;
     }

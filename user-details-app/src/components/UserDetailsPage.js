@@ -1,18 +1,19 @@
 'use client';
 
-import SideNavigationBar from '@/components/SideNavigationBar';
-import UserDetails from '@/components/UserDetails';
-import Header from '@/components/Header';
-import { users, navigationIcons, headerIcons, notificationsIcons, notificationFilters, notifications, detailsFilter, jobDetails } from './NavigationIcons.json';
-
-import './UserDetailsPage.scss';
-import Notifications from '@/components/Notifications';
-import JobDetails from '@/components/JobDetails';
-import AccountDetails from '@/components/AccountDetails';
 import { useDispatch, useSelector } from 'react-redux';
 import { userDetailsStart } from '@/redux/slices/userDetails';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+
+import SideNavigationBar from '@/components/SideNavigationBar';
+import UserDetails from '@/components/UserDetails';
+import Header from '@/components/Header';
+import Notifications from '@/components/Notifications';
+import JobDetails from '@/components/JobDetails';
+import AccountDetails from '@/components/AccountDetails';
+import { navigationIcons, headerIcons, notificationsIcons, notificationFilters, notifications, detailsFilter, jobDetails } from './NavigationIcons.json';
+
+import './UserDetailsPage.scss';
 
 export default function UserDetailsPage() {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export default function UserDetailsPage() {
       dispatch(userDetailsStart({ userId }));
     }
   }, [userId]);
+
   return (
     <div className='user-details-page'>
       <SideNavigationBar navigationIcons={navigationIcons} />
@@ -37,7 +39,7 @@ export default function UserDetailsPage() {
         <Header headerIcons={headerIcons} />
         <div className='user-details-notifications'>
           <div className='user-details-section-container'>
-            <AccountDetails bodyObj={bodyObj} setEditMode={setEditMode} />
+            <AccountDetails bodyObj={bodyObj} editMode={editMode} setEditMode={setEditMode} />
             <table className='user-details-table'>
               <UserDetails className={'hide-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={2} end={10} />
               <UserDetails className={'hide-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={10} end={18} />

@@ -29,7 +29,7 @@ export default function Notifications({ notificationsIcons, notificationFilters,
       <IconsList icons={notificationsIcons} position='notifications' />
       <div className='notifications'>
         <ul className='filter-options'>
-          {notificationFilters?.map((item) => <li key={item.id}><button className={`${clicked === item.id ? 'active' : ''}`} id={item.id} onClick={() => filterNotifications(item.id)}>{item.name}</button></li>)}
+          {notificationFilters?.map((item) => <li key={item.id}><button className={`${clicked === item.id ? 'active' : ''}`} id={item.id} onClick={() => filterNotifications(item.id)}><label>{item.name}</label></button></li>)}
         </ul>
         <div className='notification-cards-list'>
           {notificationData?.map((item) => <NotificationCard key={item} data={item}/>)}

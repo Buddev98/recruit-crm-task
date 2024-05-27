@@ -1,7 +1,9 @@
+@import '../styles/colors.scss';
+
 .notifications-section {
   padding: 0 0 16px;
   width: 30%;
-  @media only screen and (width < 767px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
   .icons-list {
@@ -29,7 +31,7 @@
       button {
         all: unset;
         &.active {
-          color: #2570CA;
+          color: $blue;
         }
       }
     }

@@ -1,0 +1,42 @@
+@import '../styles/colors.scss';
+
+.users-list {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: solid 1px #E9ECEF;
+    border-radius: 5px;
+    width: 50%;
+    margin: 50px auto;
+    p {
+      &:last-child {
+        span {
+          &:first-child {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    .view-details {
+      color: $greyThin;
+      padding: 10px;
+      border: solid 1px #E9ECEF;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      &:hover {
+        background-color: $greyThin;
+        color: #FFFFFF;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: unset;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}

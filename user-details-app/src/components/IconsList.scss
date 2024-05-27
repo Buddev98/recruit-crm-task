@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 .icons-list {
   list-style: none;
   padding-left: unset;
@@ -18,7 +20,7 @@
   }
   li.navigation-icons {
     &.active {
-      background-color: #2570CA;
+      background-color: $blue;
     }
   }
 }

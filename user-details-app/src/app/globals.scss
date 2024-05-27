@@ -3,14 +3,22 @@
 .body {
   max-width: 1300px;
   padding: 0;
-  color: #495057;
+  color: $greyThin;
   margin: 0 auto;
   box-sizing: border-box;
   font-family: 'sfPro-regular', sans-serif;
   font-size: 14px;
   p {
     margin-top: unset;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+  }
+  label {
+    font-weight: 600;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: unset;
   }
   button {
     all: unset;

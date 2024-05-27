@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 .notification-card {
   padding: 16px;
   border: solid 1px #E9ECEF;
@@ -5,8 +7,9 @@
   background-color: #FFFFFF;
   margin-bottom: 16px;
   p {
-    span {
+    label {
       margin-right: 10px;
+      color: $blue;
     }
     &:first-child {
       display: flex;
@@ -19,7 +22,7 @@
       }
     }
     &:nth-child(3) {
-      color: #2570CA;
+      color: $blue;
     }
     &:last-child {
       display: flex;

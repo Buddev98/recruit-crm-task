@@ -9,12 +9,12 @@ export default function NotificationCard({ data = {} }) {
     <div className='notification-card'>
       <p>
         {iconName && <Image src={`/images/navigationIcons/${iconName}.svg`} width={10} height={10} alt={`${id}s`} />}
-        <span>{id}</span>
+        <label>{id}</label>
         {status && <span>{status}</span>}
       </p>
       <p>{content}</p>
-      <p>{association} Association(s)</p>
-      <p><span><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} alt='user' />{userName}</span><span>{dateTime}</span></p>
+      <p><label>{association} Association(s)</label></p>
+      <p><span><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} alt='user' /> {userName}</span><span>{dateTime}</span></p>
     </div>
   )
 }

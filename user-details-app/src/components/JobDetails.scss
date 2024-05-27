@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 .jobs-section {
   padding: 0 0 16px;
  
@@ -29,8 +31,8 @@
         } 
         &.active {
           background-color: #FFFFFF;
-          border-bottom: 2px solid #2570CA;
-          color: #2570CA;
+          border-bottom: 2px solid $blue;
+          color: $blue;
         }
         button {
           all: unset;

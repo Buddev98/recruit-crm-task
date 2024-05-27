@@ -1,9 +1,12 @@
 'use client';
 
 import { userDetailsStart } from '@/redux/slices/userDetails';
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import Link from 'next/link';
+
+import './Users.scss';
 
 export default function Users() {
   const dispatch = useDispatch();
@@ -16,7 +19,7 @@ export default function Users() {
   }, []);
 
   return (
-    <div>
+    <ul className='users-list'>
       {data?.users?.map((item) => {
         const {
           id = '',
@@ -28,17 +31,19 @@ export default function Users() {
           } = {},
         } = item;
         return (
-          <li>
+          <li key={id}>
             <div>
-              <span>{userName}</span>
-              <span>{position}</span>
-              <span>{state}</span>
-              <span>{city}</span>
+              <p><label>{userName}</label></p>
+              <p>{position}</p>
+              <p>
+                <span>{state}</span>
+                <span>{city}</span>
+              </p>
             </div>
-            <Link href={`/user-details/${id}`}>View Details</Link>
+            <Link className='view-details' href={`/user-details/${id}`}>View Details</Link>
           </li>
         );
       })}
-    </div>
+    </ul>
   );
 }

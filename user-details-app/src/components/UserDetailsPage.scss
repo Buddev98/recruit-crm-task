@@ -1,7 +1,9 @@
+@import '../styles/colors.scss';
+
 .user-details-page {
   display: flex;
   justify-content: space-between;
-  @media only screen and (width < 767px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
   .main-section {
@@ -38,12 +40,9 @@
           }
           
           td {
-            padding: 5px 0;
-            @media only screen and (max-width: 768px) {
-              padding: 5px;
-            }
+            padding: 5px;
             label {
-              color: #343A40;
+              color: $greyBold;
               margin-right: 40px;
               @media only screen and (max-width: 768px) {
                 margin-right: 20px;
