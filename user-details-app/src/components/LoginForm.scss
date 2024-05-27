@@ -4,13 +4,16 @@
   border-radius: 5px;
   width: 400px;
   min-height: 300px;
-  margin: auto;
+  margin: 20px auto;
   text-align: center;
   @media only screen and (max-width: 768px) {
     width: unset;
     margin: 20px;
   }
   .login-form, .registeration-form {
+    .error {
+      color: #E03131;
+    }
     .email-input, .password-input, .login-btn {
       display: block;
       margin: 10px auto; 

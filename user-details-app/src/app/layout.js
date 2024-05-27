@@ -1,4 +1,5 @@
 import "./globals.scss";
+import AppProvider from "./provider";
 
 export const metadata = {
   title: "Recruit CRM",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='body'>{children}</body>
+      <body className='body'>
+        <AppProvider children={children} />
+      </body>
     </html>
   );
 }

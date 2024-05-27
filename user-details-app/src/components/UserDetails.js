@@ -1,6 +1,6 @@
 'use client';
 
-export default function UserDetails({ user, start, end, className }) {
+export default function UserDetails({ user = {}, start, end, className }) {
   let isEditMode = false;
   return (
     <tbody className={className}>
@@ -13,7 +13,7 @@ export default function UserDetails({ user, start, end, className }) {
                   <strong><label>{user[key]?.label}</label></strong>
                 </td>
                 <td>
-                  {isEditMode && <input type="text" name={user[key]?.label} value={user[key]?.value} />}
+                  {isEditMode && user[key]?.isEditable && <input type="text" name={user[key]?.label} value={user[key]?.value} />}
                   {!isEditMode && ((key === 'languageSkills' || key === 'skills') ? user[key]?.value?.join(', ') : user[key]?.value)}
                 </td>
               </tr>

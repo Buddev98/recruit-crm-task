@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'sfPro-regular';
+  src: local('sfPro-regular'),
+    url('../fonts/SFPRODISPLAYREGULAR.ttf') format('ttf'),
+    url('../fonts/SFPRODISPLAYREGULAR.OTF') format('otf'),
+}
+
+@font-face {
+  font-family: 'sfPro-bold';
+  src: local('sfPro-bold'),
+    url('../fonts/SFPRODISPLAYBOLD.ttf') format('ttf'),
+    url('../fonts/SFPRODISPLAYBOLD.OTF') format('otf'),
+}
+
+@font-face {
+  font-family: 'sfPro-medium';
+  src: local('sfPro-medium'),
+    url('../fonts/SFPRODISPLAYMEDIUM.ttf') format('ttf'),
+    url('../fonts/SFPRODISPLAYMEDIUM.OTF') format('otf'),
+}

@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "personalDetails": {
+        "userName": "William Sample",
+        "password": "Will@123",
+        "email": "williamsample@gmail.com",
+        "phoneNumber": "+91 9021232326",
+        "position": "Senior Product Manager",
+        "state": "United States",
+        "city": "Dallas",
+        "contactLinked": false
+      },
+      "currentOrganization": { "label": "Current Organization", "value": "TCS", "isEditable": true },
+      "skills": { "label": "Skills", "value": ["Html", "CSS", "JavaScript"] },
+      "availableFrom": { "label": "Available From", "value": "Jan, 13,2024" },
+      "currentSalary": { "label": "Current Salary", "value": "$45000", "isEditable": true },
+      "noticePeriod": { "label": "Notice Period", "value": "90 Days", "isEditable": true },
+      "fullAddress": { "label": "Full Address", "value": "9500 Chennai", "isEditable": true },
+      "resume": { "label": "Resume", "value": "resume" },
+      "totalExperience": { "label": "Total Experience", "value": "7 Years", "isEditable": true },
+      "summary": { "label": "Summary", "value": "React Background", "isEditable": true },
+      "currentEmploymentStatus": { "label": "Current Employment Status", "value": "Active", "isEditable": true },
+      "dateOfBirth": { "label": "Date of Birth", "value": "15 June 1993" },
+      "relevantExperience": { "label": "Relevent Experience", "value": "8 Years", "isEditable": true },
+      "salaryExpectation": { "label": "Salary Expectation", "value": "$80000", "isEditable": true },
+      "status": { "label": "Status", "value": "Submitted for Approval" },
+      "salaryType": { "label": "Salary Type", "value": "Annual", "isEditable": true },
+      "languageSkills": { "label": "Language Skills", "value": ["Tamil", "English", "Hindi"] }
+    },
+    {
+      "id": 2,
+      "personalDetails": {
+        "userName": "Phyllis Yang",
+        "password": "Will@123",
+        "email": "phyllisyang@gmail.com",
+        "phoneNumber": "+91 9021232326",
+        "position": "Product Manager",
+        "state": "United States",
+        "city": "Chicago",
+        "contactLinked": true
+      },
+      "currentOrganization": { "label": "Current Organization", "value": "Accenture", "isEditable": true },
+      "skills": { "label": "Skills", "value": ["Java", "Spring", "SpringBoot"] },
+      "availableFrom": { "label": "Available From", "value": "Jan, 17,2024" },
+      "currentSalary": { "label": "Current Salary", "value": "$50000", "isEditable": true },
+      "noticePeriod": { "label": "Notice Period", "value": "60 Days", "isEditable": true },
+      "fullAddress": { "label": "Full Address", "value": "9500 Pune", "isEditable": true },
+      "resume": "resume",
+      "totalExperience": { "label": "Total Experience", "value": "9 Years", "isEditable": true },
+      "summary": { "label": "Summary", "value": "Next js Background", "isEditable": true },
+      "currentEmploymentStatus": { "label": "Current Employment Status", "value": "InActive", "isEditable": true },
+      "dateOfBirth": { "label": "Date of Birth", "value": "15 Aug 1996" },
+      "relevantExperience": { "label": "Relevent Experience", "value": "6 Years", "isEditable": true },
+      "salaryExpectation": { "label": "Salary Expectation", "value": "$90000", "isEditable": true },
+      "status": "Submitted for Approval",
+      "salaryType": "Annual",
+      "languageSkills": ["Tamil", "English", "Hindi"]
+    }
+  ]
+}
