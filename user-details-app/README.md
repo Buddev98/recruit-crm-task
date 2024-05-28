@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Before starting the server install the node packages, open the terminal and run the following command, 
+
+```bash
+npm install
+```
+
 First, run the development server:
 
 ```bash
@@ -15,6 +21,13 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+secondly, start the json-server 
+Open another terminal and run the following command
+
+```bash
+npx json-server -p 5000 --watch db.json
+```
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
