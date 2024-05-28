@@ -3,6 +3,7 @@
 import { userDetailsStart } from '@/redux/slices/userDetails';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
 
@@ -11,12 +12,13 @@ import './Users.scss';
 export default function Users() {
   const dispatch = useDispatch();
   const { data = {} } = useSelector(({ userDetails }) => userDetails);
-
+  const path = usePathname();
+  
   useEffect(() => {
-    if(Object.keys(data)?.length === 0) {
+    if(path === '/') {
       dispatch(userDetailsStart({ type: 'all' }));
     }
-  }, []);
+  }, [path]);
 
   return (
     <ul className='users-list'>
