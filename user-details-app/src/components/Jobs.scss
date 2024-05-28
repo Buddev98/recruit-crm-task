@@ -6,11 +6,11 @@
       margin-right: 10px;
     }
     button {
-      padding: 5px;
+      padding: 8px 12px;
       border: solid 1px #E9ECEF;
       border-radius: 5px;
     }
-    &.status, &.view-details, &.toggle-switch {
+    &.status-section, &.view-details, &.toggle-switch {
       @media only screen and (max-width: 768px) {
         display: none;
       }

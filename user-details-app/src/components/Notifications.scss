@@ -31,7 +31,9 @@
       button {
         all: unset;
         &.active {
-          color: $blue;
+          label {
+            color: $blue !important;
+          }
         }
       }
     }

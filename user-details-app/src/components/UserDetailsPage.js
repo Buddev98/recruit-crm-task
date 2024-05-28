@@ -11,11 +11,12 @@ import Header from '@/components/Header';
 import Notifications from '@/components/Notifications';
 import JobDetails from '@/components/JobDetails';
 import AccountDetails from '@/components/AccountDetails';
-import { navigationIcons, headerIcons, notificationsIcons, notificationFilters, notifications, detailsFilter, jobDetails, btnList, socialMediaIcons } from './NavigationIcons.json';
+import jsonData from './NavigationIcons.json';
 
 import './UserDetailsPage.scss';
 
 export default function UserDetailsPage() {
+  const { navigationIcons, headerIcons, notificationsIcons, notificationFilters, notifications, detailsFilter, jobDetails, btnList, socialMediaIcons } = jsonData;
   const dispatch = useDispatch();
   const { userId = '' } = useParams();
   const [editMode, setEditMode] = useState(false);

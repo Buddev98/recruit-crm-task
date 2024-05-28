@@ -14,16 +14,16 @@ export default function Jobs({ data = {} }) {
           alt="icon"
         />
         <div>
-          <p>{name}</p>
+          <p><label className='color-black'>{name}</label></p>
           <p>{company}</p>
         </div>
       </td>
       <td>
         <p><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} alt='user' />{userName}</p>
-        <p>{date}</p>
+        <p><Image src={'/images/navigationIcons/clock-grey.svg'} width={12} height={12} alt='clock' />{date}</p>
       </td>
-      <td className='status'>{status}</td>
-      <td className='view-details'><button>View Files</button></td>
+      <td className='status-section'><span className='status'>{status}</span></td>
+      <td className='view-details'><button><label>View Files</label></button></td>
       <td className='toggle-switch'>
         <Switch />
       </td>

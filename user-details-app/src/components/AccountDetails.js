@@ -47,16 +47,16 @@ export default function AccountDetails({ editMode = false, setEditMode = () => {
         <div><Image className='profile-icon' src={'/images/navigationIcons/profile-icon.svg'} width={40} height={40} alt='profile' /></div>
         <div>
           <div className='user-info'><label>{userName}</label> <IconsList icons={socialMediaIcons} /></div>
-          <p><span>{position}</span> <span>{state}</span> <span>{city}</span></p>
+          <p className='location-info'><span>{position}</span> <span>{state}</span> <span>{city}</span></p>
         </div>
       </div>
       <div className='btn-options'>
-        {btnList?.map((item) => <button className={`${item.id === 'contact' ? 'contact' : ''} ${item.id === clicked ? 'active' : ''} ${(item.isLinked && contactLinked) ? 'linked' : 'not-linked' }`} id={item.id} onClick={() => handleClick(item)} >{item.name ? item.name : <Image src={`/images/navigationIcons/${item.icon}.svg`} width={15} height={15} alt='user' />}</button>)}
+        {btnList?.map((item) => <button key={item.id} className={`${item.id === 'contact' ? 'contact' : ''} ${item.id === clicked ? 'active' : ''} ${(item.isLinked && contactLinked) ? 'linked' : 'not-linked' }`} id={item.id} onClick={() => handleClick(item)} >{item.name ? item.name : <Image src={`/images/navigationIcons/${item.icon}.svg`} width={15} height={15} alt='user' />}</button>)}
       </div>
     </div>
     <div className='contact-info'>
-      <span><Image className='profile-icon' src={'/images/navigationIcons/mail.svg'} width={15} height={15} alt='profile' /> <label>{email}</label></span>
-      <span><Image className='profile-icon' src={'/images/navigationIcons/phone-call.svg'} width={15} height={15} alt='phone' /> <label>{phoneNumber}</label></span>
+      <span><Image className='profile-icon' src={'/images/navigationIcons/mail.svg'} width={15} height={15} alt='profile' /> <label className='color-blue'>{email}</label></span>
+      <span><Image className='profile-icon' src={'/images/navigationIcons/phone-call.svg'} width={15} height={15} alt='phone' /> <label className='color-blue'>{phoneNumber}</label></span>
     </div>
     </>
   )

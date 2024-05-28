@@ -19,6 +19,7 @@
       align-items: center;
       label {
         margin-right: 20px;
+        font-size: $font18;
       }
       .icons-list {
         display: flex;
@@ -28,6 +29,12 @@
           height: 15px;
           margin: unset;
         }
+      }
+    }
+    .location-info {
+      span {
+        margin-right: 20px;
+        font-size: $font13;
       }
     }
     @media only screen and (max-width: 768px) {
@@ -77,7 +84,7 @@
   span {
     display: flex;
     align-items: center;
-    color: $blue;
+    color: $blueAC;
     &:first-child, img {
       margin-right: 10px;
     }
