@@ -1,9 +1,14 @@
+@import '../styles/colors.scss';
+
 .jobs {
   outline: thin solid #E9ECEF;
   border-radius: 5px;
   td {
     img {
       margin-right: 10px;
+    }
+    .company-name {
+      color: $grey96;
     }
     button {
       padding: 8px 12px;

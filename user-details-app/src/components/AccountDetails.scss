@@ -1,5 +1,38 @@
 @import '../styles/colors.scss';
 
+.breadcrumb-section {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F8F9FA;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+  }
+  p {
+    margin: unset;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 12px;
+    }
+    label {
+      margin-right: 10px;
+    }
+    span {
+      margin-left: 10px;
+      padding: 5px;
+      border: solid 1px #E9ECEF;
+      border-radius: 5px;
+    }
+  }
+  button {
+    padding: 8px 12px;
+    margin-right: 12px;
+    border: solid 1px #E9ECEF;
+    border-radius: 5px;
+  }
+}
+
 .account-details {
   display: flex;
   padding: 16px;
@@ -80,6 +113,12 @@
   display: flex;
   align-items: center;
   border-bottom: solid 1px #E9ECEF;
+  justify-content: space-between;
+
+  p{
+    display: flex;
+    align-items: center;
+  }
   
   span {
     display: flex;
@@ -90,6 +129,7 @@
     }
   }
   @media only screen and (max-width: 768px) {
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
   }
 }

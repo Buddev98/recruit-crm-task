@@ -15,7 +15,7 @@ export default function Jobs({ data = {} }) {
         />
         <div>
           <p><label className='color-black'>{name}</label></p>
-          <p>{company}</p>
+          <p className='company-name'>{company}</p>
         </div>
       </td>
       <td>

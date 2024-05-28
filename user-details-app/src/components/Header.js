@@ -16,7 +16,7 @@ export default function Header({ headerIcons }) {
       <Link href={'/'}>
         <Image className='logo' src={'/images/svg/RCRM-Logo-Watermark.svg'} width={160} height={35} alt='RCRM-Logo' />
       </Link>
-      <div className='icons-section' style={{ display: 'flex', alignItems: 'center' }}>
+      <div className='icons-section'>
         {headerIcons && <IconsList icons={headerIcons} />}
         <div className='user-info'>
           <Image src={'/images/navigationIcons/userIcon.svg'} width={36} height={36} alt='userIcon' />

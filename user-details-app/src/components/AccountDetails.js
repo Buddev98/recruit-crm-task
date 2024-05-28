@@ -15,7 +15,7 @@ export default function AccountDetails({ editMode = false, setEditMode = () => {
   const { userId = '' } = useParams();
   const [clicked, setClicked] = useState('');
   const {
-    data: { personalDetails: { 
+    data: { id = '', personalDetails: { 
       userName = '',
       email = '',
       phoneNumber = '',
@@ -39,9 +39,18 @@ export default function AccountDetails({ editMode = false, setEditMode = () => {
       (bodyObj?.objects && Object.keys(bodyObj?.objects)?.length > 0) && dispatch(userDetailsStart({ bodyObj: bodyObj?.objects, method: 'PATCH', userId }));
     }
   }
-
+  const dateTime = new Date();
+  const date = dateTime.toLocaleString('en-us', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', hour12: true, minute: '2-digit' });
   return (
     <>
+    <div className='breadcrumb-section'>
+      <p><label className='color-blue'>Candidates &gt;</label><label>{userName}<span>ID-23{id}</span></label></p>
+      <div>
+        <button className='active'><label>Request Profile Update</label></button>
+        <button><label>Previous</label></button>
+        <button><label>next</label></button>
+      </div>
+    </div>
     <div className='account-details'>
       <div className='account-info'>
         <div><Image className='profile-icon' src={'/images/navigationIcons/profile-icon.svg'} width={40} height={40} alt='profile' /></div>
@@ -55,8 +64,14 @@ export default function AccountDetails({ editMode = false, setEditMode = () => {
       </div>
     </div>
     <div className='contact-info'>
-      <span><Image className='profile-icon' src={'/images/navigationIcons/mail.svg'} width={15} height={15} alt='profile' /> <label className='color-blue'>{email}</label></span>
-      <span><Image className='profile-icon' src={'/images/navigationIcons/phone-call.svg'} width={15} height={15} alt='phone' /> <label className='color-blue'>{phoneNumber}</label></span>
+      <p>
+        <span><Image className='profile-icon' src={'/images/navigationIcons/mail.svg'} width={15} height={15} alt='profile' /> <label className='color-blue'>{email}</label></span>
+        <span><Image className='profile-icon' src={'/images/navigationIcons/phone-call.svg'} width={15} height={15} alt='phone' /> <label className='color-blue'>{phoneNumber}</label></span>
+      </p>
+      <p>
+        <span className='color-black'><Image src={'/images/navigationIcons/user-name.svg'} width={12} height={12} alt='user' /> {userName}</span>
+        <span className='color-black'><Image src={'/images/navigationIcons/clock-grey.svg'} width={14} height={14} alt='clock' /> {date}</span>
+      </p>
     </div>
     </>
   )

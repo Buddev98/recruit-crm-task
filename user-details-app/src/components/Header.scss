@@ -38,6 +38,8 @@
   }
 
   .icons-section {
+    display: flex;
+    align-items: center;
     .icons-list {
       display: flex;
       margin: unset;
