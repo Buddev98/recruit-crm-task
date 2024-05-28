@@ -10,14 +10,16 @@ export default function* userDetailsSaga() {
       const { payload } = yield take(requestChannel);
       const method = (payload && payload?.method) ? payload?.method : 'GET';
       const data = (payload && payload?.bodyObj) ? payload?.bodyObj : {};
-      const url = (payload && payload?.userId !== '') ? `http://localhost:5000/users/${payload?.userId}` : (payload && payload?.method === 'PATCH') ? `http://localhost:5000/users/${payload?.userId}` : 'http://localhost:5000/users';
-      const response = yield call(() => fetchData(url, method, data));
-      if(response?.ok && response?.status === 200) {
-        const jsonData = yield response.json();
-        const data = (payload && payload?.userId !== '') ? jsonData : { users: jsonData };
-        yield put(userDetailsSuccess({ data }));
-      } else {
-        yield put(userDetailsError(response.error));
+      const url = (payload && payload?.userId && payload?.userId !== '') ? `http://localhost:5000/users/${payload?.userId}` : (payload && payload?.method === 'PATCH') ? `http://localhost:5000/users/${payload?.userId}` : (payload && payload?.type === 'all') && 'http://localhost:5000/users';
+      if(url && url !== '') {
+        const response = yield call(() => fetchData(url, method, data));
+        if(response?.ok && response?.status === 200) {
+          const jsonData = yield response.json();
+          const data = (payload && payload?.userId && payload?.userId !== '') ? jsonData : { users: jsonData };
+          yield put(userDetailsSuccess({ data }));
+        } else {
+          yield put(userDetailsError(response.error));
+        }
       }
     }
   } catch (error) {

@@ -11,7 +11,7 @@ import Header from '@/components/Header';
 import Notifications from '@/components/Notifications';
 import JobDetails from '@/components/JobDetails';
 import AccountDetails from '@/components/AccountDetails';
-import { navigationIcons, headerIcons, notificationsIcons, notificationFilters, notifications, detailsFilter, jobDetails } from './NavigationIcons.json';
+import { navigationIcons, headerIcons, notificationsIcons, notificationFilters, notifications, detailsFilter, jobDetails, btnList, socialMediaIcons } from './NavigationIcons.json';
 
 import './UserDetailsPage.scss';
 
@@ -20,12 +20,10 @@ export default function UserDetailsPage() {
   const { userId = '' } = useParams();
   const [editMode, setEditMode] = useState(false);
   const {
-    data = {},
+    data = {}
   } = useSelector(({ userDetails }) => userDetails);
-
-  const [bodyObj, setBodyObj] = useState(data);
-
-
+  const [bodyObj, setBodyObj] = useState(data); 
+  
   useEffect(() => {
     if(userId !== '') {
       dispatch(userDetailsStart({ userId }));
@@ -39,7 +37,7 @@ export default function UserDetailsPage() {
         <Header headerIcons={headerIcons} />
         <div className='user-details-notifications'>
           <div className='user-details-section-container'>
-            <AccountDetails bodyObj={bodyObj} editMode={editMode} setEditMode={setEditMode} />
+            <AccountDetails socialMediaIcons={socialMediaIcons} btnList={btnList} bodyObj={bodyObj} editMode={editMode} setEditMode={setEditMode} />
             <table className='user-details-table'>
               <UserDetails className={'hide-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={2} end={10} />
               <UserDetails className={'hide-mobile'} editMode={editMode} setBodyObj={setBodyObj} user={data} start={10} end={18} />

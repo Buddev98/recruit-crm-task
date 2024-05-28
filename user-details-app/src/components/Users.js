@@ -14,7 +14,7 @@ export default function Users() {
 
   useEffect(() => {
     if(Object.keys(data)?.length === 0) {
-      dispatch(userDetailsStart());
+      dispatch(userDetailsStart({ type: 'all' }));
     }
   }, []);
 
